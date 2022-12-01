@@ -1,3 +1,76 @@
+const lowerCount = document.querySelector(".prevBtn");
+const addCount = document.querySelector(".nextBtn");
+const counter = document.querySelector("#counter");
+
+let count = counter.innerHTML;
+
+function addCounter() {
+  count++;
+  counter.innerHTML = count;
+
+  if (count > 0) {
+    counter.style.color = 'green';
+  }
+  else if (count === 0) {
+    counter.style.color = 'black';
+  }
+}
+
+function lowerCounter() {
+  count--;
+  counter.innerHTML = count;
+  
+  if(count < 0) {
+    counter.style.color = 'red';
+  }
+  else if (count === 0) {
+    counter.style.color = 'black';
+  }
+}
+
+addCount.addEventListener('click', addCounter);
+lowerCount.addEventListener('click', lowerCounter);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 (function(){
   const buttons = document.querySelectorAll('.counterBtn')
   let count= 0
@@ -26,3 +99,4 @@
     })
   })
 })()
+*/
